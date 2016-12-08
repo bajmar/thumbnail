@@ -24,7 +24,7 @@ class Thumbimg {
         $outputFileName = $width . 'x' . $height . '_' . $quality . '_' . $fileName;
         $outputFilePath = $outputDir . $outputFileName;
 
-        if (!file_exists($outputFilePath)) {
+        if (!file_exists($outputFilePath) AND file_exists($srcImages)) {
             self::createThumbnail($srcImages, $width, $height, $quality, $outputFilePath, $extension);
         }
 
