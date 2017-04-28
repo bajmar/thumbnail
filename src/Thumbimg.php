@@ -104,7 +104,7 @@ class Thumbimg {
      * Extract a file extension
      */
     private static function setExtension($srcImages) {
-        return pathinfo($srcImages, PATHINFO_EXTENSION);
+        return strtolower(pathinfo($srcImages, PATHINFO_EXTENSION));
     }
 
     /**
